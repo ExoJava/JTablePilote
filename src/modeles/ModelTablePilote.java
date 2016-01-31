@@ -75,7 +75,7 @@ public class ModelTablePilote extends AbstractTableModel
     
     @Override
     public String getColumnName(int column) {
-        return listeColonne.get(column); //To change body of generated methods, choose Tools | Templates.
+        return listeColonne.get(column); 
     }
     
     public void addColumn(String colName)

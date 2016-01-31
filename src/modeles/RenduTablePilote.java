@@ -8,7 +8,6 @@ package modeles;
 import dao.ManagerPilote;
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Dimension;
 import java.util.ArrayList;
 import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
@@ -44,6 +43,7 @@ public class RenduTablePilote implements TableCellRenderer{
                 ((JComboBox<String>) compo).setSelectedItem(value);
                 table.getColumn("Prenom").setCellEditor(new DefaultCellEditor((JComboBox) compo));
                 break;
+            
             case 4: //colonne des boutons Virer
                 if (table.getModel().getValueAt(row, 3) == Boolean.TRUE)
                 { //si le check box est 
@@ -64,6 +64,7 @@ public class RenduTablePilote implements TableCellRenderer{
                 else compo = new JButton("Virer");
                 
                 break;
+            
             default:
                 compo = new JLabel(value.toString());
                 ((JLabel)compo).setOpaque(true);
